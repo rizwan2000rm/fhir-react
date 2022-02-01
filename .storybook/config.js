@@ -1,4 +1,4 @@
-import '../src/components/ui/bootstrap-reboot.min.css';
+// import '../src/components/ui/bootstrap-reboot.min.css';
 import '../src/style.css';
 import '../src/style.scss';
 
@@ -6,9 +6,9 @@ import { addDecorator, addParameters, configure } from '@storybook/react';
 
 import { withKnobs } from '@storybook/addon-knobs';
 
-if (typeof document !== 'undefined') {
-  require('bootstrap/dist/js/bootstrap.min.js');
-}
+// if (typeof document !== 'undefined') {
+//   require('bootstrap/dist/js/bootstrap.min.js');
+// }
 
 addParameters({
   options: {
