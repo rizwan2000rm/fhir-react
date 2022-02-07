@@ -149,7 +149,7 @@ const MedicationAdministration = props => {
             <Reference fhirData={practitioner} />
           </Value>
         )}
-        <div className="overflow-auto">
+        <div className="">
           <Table>
             <thead>
               <TableRow>

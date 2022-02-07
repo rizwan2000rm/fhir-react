@@ -33,7 +33,7 @@ const Items = ({ fhirData: items = [] }) => {
             <TableHeader>Net</TableHeader>
           </TableRow>
         </thead>
-        <tbody className="border-top-0">
+        <tbody className="">
           {items.map((item, idx) => (
             <Item key={idx} item={item} level={0} parentSequences={[]} />
           ))}

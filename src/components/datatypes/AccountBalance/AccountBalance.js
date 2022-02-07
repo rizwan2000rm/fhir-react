@@ -6,7 +6,7 @@ const AccountBalance = props => {
   const { totalBenefit, totalCost } = props;
 
   return (
-    <div className="fhir-datatype__AccountBalance container-fluid p-0 m-0 ">
+    <div className="fhir-datatype__AccountBalance">
       <Value label="Total cost" data-testid="totalCost" secondary>
         {parseValueIntoMonetaryValueOfGivenCurrency(
           totalCost.value,
@@ -19,7 +19,7 @@ const AccountBalance = props => {
           totalBenefit.code,
         )}
       </Value>
-      <div className="border-top my-1 row border-secondary" />
+      <div className="" />
       <Value label="Patient Owed" secondary>
         {parseValueIntoMonetaryValueOfGivenCurrency(
           totalCost.value - totalBenefit.value,

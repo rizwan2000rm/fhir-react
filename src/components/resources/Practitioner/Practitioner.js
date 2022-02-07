@@ -153,7 +153,7 @@ const Practitioner = ({ fhirResource, fhirVersion, fhirIcons }) => {
         headerContent={
           <Header
             resourceName="Practitioner"
-            additionalContent={<p className="mb-0">{`(${use})`}</p>}
+            additionalContent={<p className="">{`(${use})`}</p>}
             badges={status && <Badge data-testid="status">{status}</Badge>}
             icon={fhirIcons}
             title={<HumanName fhirData={name} isTitle />}

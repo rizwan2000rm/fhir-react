@@ -19,9 +19,7 @@ export function PatientContact(props) {
   return (
     <div>
       <HumanName fhirData={name} />
-      {relationship && (
-        <small className="text-bold">{` (${relationship})`}</small>
-      )}
+      {relationship && <small className="">{` (${relationship})`}</small>}
     </div>
   );
 }
@@ -125,7 +123,7 @@ function Patient(props) {
             additionalContent={
               patientBirthDate && (
                 <span className="text-gray-600">
-                  <span data-testid="patientGender" className="text-capitalize">
+                  <span data-testid="patientGender" className="">
                     {patientGender || 'unknown'}
                   </span>
                   {', '}

@@ -30,7 +30,7 @@ const TotalGraph = ({ fhirData }) => {
 
   return (
     <ValueSection label="Total" data-testid="total" marginTop>
-      <div className="bg-light my-3 py-2 d-flex flex-column flex-sm-row">
+      <div className="">
         <div className="graph-width-sm">
           <ExplanationOfBenefitGraph
             pieChartProperties={{ isInteractive: false }}
@@ -38,16 +38,16 @@ const TotalGraph = ({ fhirData }) => {
             margin={{ top: 20, bottom: 20 }}
           />
         </div>
-        <div className="my-sm-auto">
-          <div className="row justify-content-center">
+        <div className="">
+          <div className="">
             {getChartData({ totalCost, totalBenefit }).map((item, index) => (
               <div
                 key={`graph-legend-item-${index}`}
                 style={{ minWidth: 160 }}
-                className="d-flex mb-2 px-3 w-auto"
+                className=""
               >
                 <span
-                  className="me-2 rounded-pill mt-3 mb-2 my-sm-0"
+                  className=""
                   style={{ width: 4, background: item.color }}
                 />
                 <Value dirColumn label={item.label} data-testid={item.id}>

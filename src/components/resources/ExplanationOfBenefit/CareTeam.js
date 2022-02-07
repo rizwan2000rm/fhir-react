@@ -23,7 +23,7 @@ const CareTeam = ({ fhirData: careTeam = [] }) => {
             <TableHeader>Qualification</TableHeader>
           </TableRow>
         </thead>
-        <tbody className="border-top-0">
+        <tbody className="">
           {careTeam.map((member, idx) => (
             <TeamMember
               key={idx}

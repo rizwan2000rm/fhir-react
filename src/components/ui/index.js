@@ -16,29 +16,23 @@ export const Header = ({
   rightAdditionalContent,
   children,
 }) => {
-  const rightItemsClass = 'align-items-center flex-fill d-flex';
+  const rightItemsClass = '';
 
   return (
     <>
       {// This condition was left due to fact, that to much changes in Header will generate many errors in tests. This condition will be removed after all changes have been made.
       children || (
-        <div
-          className={`fhir-ui__${resourceName}-Header w-100 p-4 position-relative`}
-        >
+        <div className={`fhir-ui__${resourceName}-Header`}>
           <div
             className={`fhir-ui__${resourceName}-Header__title-data ${
               isAccordionOpenable ? 'header__title-row' : ''
-            } d-flex w-100 flex-column flex-sm-row`}
+            }`}
           >
-            <div className="d-flex">
-              <div
-                className={`fhir-ui__${resourceName}-Header__icon d-flex align-items-center flex-shrink-1 m-half me-2`}
-              >
+            <div className="">
+              <div className={`fhir-ui__${resourceName}-Header__icon`}>
                 <HeaderIcon headerIcon={icon} resourceName={resourceName} />
               </div>
-              <div
-                className={`fhir-ui__${resourceName}-Header__title flex-fill text-start`}
-              >
+              <div className={`fhir-ui__${resourceName}-Header__title`}>
                 <Title data-testid={titleTestID || 'title'}>
                   {title || ''}
                 </Title>
@@ -46,25 +40,23 @@ export const Header = ({
             </div>
 
             <div
-              className={`fhir-ui__${resourceName}-Header__badges ps-1 ps-sm-2 mt-3 mt-sm-0 badges-max-width-sm flex-wrap flex-sm-nowrap justify-content-between justify-content-sm-end ${rightItemsClass}`}
+              className={`fhir-ui__${resourceName}-Header__badges ${rightItemsClass}`}
             >
-              {prefixBadge && <div className="me-3">{prefixBadge}</div>}
-              <div className="d-flex">
+              {prefixBadge && <div className="">{prefixBadge}</div>}
+              <div className="">
                 {badges}
-                {additionalBadge && (
-                  <div className="ms-3">{additionalBadge}</div>
-                )}
+                {additionalBadge && <div className="">{additionalBadge}</div>}
               </div>
             </div>
           </div>
           <div
-            className={`fhir-ui__${resourceName}-Header__additional-content w-100 justify-content-start d-flex  ${
-              additionalContent ? ' pt-2' : ''
+            className={`fhir-ui__${resourceName}-Header__additional-content ${
+              additionalContent ? '' : ''
             }`}
           >
             {additionalContent}
             <div
-              className={`fhir-ui__${resourceName}-Header__rightAdditionalContent justify-content-end ${rightItemsClass}`}
+              className={`fhir-ui__${resourceName}-Header__rightAdditionalContent ${rightItemsClass}`}
             >
               {rightAdditionalContent}
             </div>
@@ -76,10 +68,7 @@ export const Header = ({
 };
 
 export const Title = props => (
-  <h4
-    className="fhir-ui__Title fw-bold fs-4 lh-base mb-0 w-90 title-width-sm"
-    data-testid={props['data-testid'] || 'title'}
-  >
+  <h4 className="fhir-ui__Title" data-testid={props['data-testid'] || 'title'}>
     {props.children}
   </h4>
 );
@@ -87,9 +76,7 @@ export const Title = props => (
 export const Badge = props => {
   return (
     <small
-      className={`fhir-ui__Badge text-capitalize d-flex align-items-center px-2 py-1 rounded-1 fw-bold ${getBadgeColor(
-        props,
-      )}`}
+      className={`fhir-ui__Badge ${getBadgeColor(props)}`}
       data-testid={props['data-testid']}
     >
       {props.children}
@@ -99,9 +86,7 @@ export const Badge = props => {
 
 export const BadgeSecondary = props => (
   <small
-    className={`fhir-ui__BadgeSecondary px-2 py-1 rounded-1 fw-bold ${getBadgeColor(
-      props,
-    )}`}
+    className={`fhir-ui__BadgeSecondary ${getBadgeColor(props)}`}
     data-testid={props['data-testid']}
   >
     {props.children}
@@ -110,16 +95,10 @@ export const BadgeSecondary = props => (
 
 export const ValueUnit = props => (
   <div className="fhir-ui__ValueUnitRoot">
-    <span
-      data-testid="valueQuantity"
-      className="fhir-ui__ValueUnitQty fw-bold me-1"
-    >
+    <span data-testid="valueQuantity" className="fhir-ui__ValueUnitQty">
       {props.valueQty}
     </span>
-    <span
-      data-testid="valueQuantityUnit"
-      className="fhir-ui__ValueUnit fw-bold text-gray-500"
-    >
+    <span data-testid="valueQuantityUnit" className="fhir-ui__ValueUnit">
       {props.valueUnit}
     </span>
   </div>
@@ -128,15 +107,12 @@ export const ValueUnit = props => (
 export const Body = ({ tableData = [], reverseContent, children }) => (
   <div className="fhir-ui__Body">
     {reverseContent ? children : null}
-    <div className="row">
+    <div className="">
       {tableData.map(
         (value, index) =>
           value.status && (
-            <div
-              className="d-flex flex-column flex-sm-row"
-              key={`table-data-item-${index}`}
-            >
-              <div className="dataTable__value-label ps-0">
+            <div className="" key={`table-data-item-${index}`}>
+              <div className="dataTable__value-label">
                 <Label>{value.label}</Label>
               </div>
               <Data data-testid={value.testId}>{value.data}</Data>
@@ -149,27 +125,18 @@ export const Body = ({ tableData = [], reverseContent, children }) => (
 );
 
 export const Value = props => (
-  <div
-    className={`fhir-ui__Value d-flex align-items-center flex-wrap flex-sm-nowrap pt-3 pb-2 pt-sm-0 pb-sm-0 ${
-      props.dirColumn ? 'flex-column align-items-baseline' : ''
-    }`}
-  >
+  <div className={`fhir-ui__Value ${props.dirColumn ? '' : ''}`}>
     <Label>{props.label}</Label>
     <Data data-testid={props['data-testid']}>{props.children}</Data>
   </div>
 );
 
 export const Label = props => (
-  <div className="fhir-ui__Label font-source text-secondary lh-lg me-2">
-    {props.children}
-  </div>
+  <div className="fhir-ui__Label">{props.children}</div>
 );
 
 export const Data = props => (
-  <div
-    className="fhir-ui__Data font-source fw-normal lh-lg text-break"
-    data-testid={props['data-testid']}
-  >
+  <div className="fhir-ui__Data" data-testid={props['data-testid']}>
     {props.children}
   </div>
 );
@@ -179,21 +146,15 @@ export const Root = props => (
 );
 
 export const Table = props => (
-  <div className="table-responsive">
-    <table className={`table table-striped mb-0 ${props.className || ''}`}>
-      {props.children}
-    </table>
+  <div className="">
+    <table className={`${props.className || ''}`}>{props.children}</table>
   </div>
 );
 
 export const TableHeader = props => {
   const { expand, noWordWrap } = props;
   return (
-    <th
-      className={`${expand ? 'w-100' : ''} ${
-        noWordWrap ? 'text-nowrap' : ''
-      } text-gray-500`}
-    >
+    <th className={`${expand ? '' : ''} ${noWordWrap ? '' : ''}`}>
       {props.children}
     </th>
   );
@@ -202,21 +163,19 @@ export const TableHeader = props => {
 export const TableRow = props => <tr>{props.children}</tr>;
 
 export const TableCell = props => (
-  <td className="align-text-top border-0" data-testid={props['data-testid']}>
+  <td className="" data-testid={props['data-testid']}>
     {props.children}
   </td>
 );
 
 export const ValueSection = props => (
   <div
-    className={`fhir-ui__ValueSection ${props.marginTop ? 'mt-40' : ''} ${
+    className={`fhir-ui__ValueSection ${props.marginTop ? '' : ''} ${
       props.marginBottom ? 'mb-40' : ''
     } ${props.className || ''}`}
     data-testid={props['data-testid']}
   >
-    <label className="fhir-ui__ValueSection-label fw-bold mb-2">
-      {props.label}
-    </label>
+    <label className="fhir-ui__ValueSection-label">{props.label}</label>
     <div className="fhir-ui__ValueSection-body">{props.children}</div>
   </div>
 );

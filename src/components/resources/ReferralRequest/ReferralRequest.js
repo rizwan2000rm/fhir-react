@@ -95,7 +95,7 @@ const ReferralRequest = props => {
             <Coding fhirData={typeCoding} />
           </Value>
         )}
-        <div className="overflow-auto">
+        <div className="">
           <Table>
             <thead>
               <TableRow>

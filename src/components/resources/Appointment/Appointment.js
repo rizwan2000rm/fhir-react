@@ -236,7 +236,7 @@ const Appointment = ({ fhirResource, fhirVersion, fhirIcons }) => {
                       <TableHeader>Other</TableHeader>
                     </TableRow>
                   </thead>
-                  <tbody className="border-top-0">
+                  <tbody className="">
                     <TableRow>
                       <TableCell>{participantPatient}</TableCell>
                       <TableCell>{participantPractitioner}</TableCell>
@@ -248,7 +248,7 @@ const Appointment = ({ fhirResource, fhirVersion, fhirIcons }) => {
             )}
             {comment && (
               <ValueSection label="Comment" data-testid="comment" marginTop>
-                <span className="text-secondary">{comment}</span>
+                <span className="">{comment}</span>
               </ValueSection>
             )}
           </Body>

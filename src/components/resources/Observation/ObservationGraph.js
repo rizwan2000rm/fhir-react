@@ -22,7 +22,7 @@ const colorfulRange = ({
 
 const rangeContent = (width, rangeClasses, value, small) => (
   <div
-    className={`${rangeClasses} text-white text-center font-source`}
+    className={`${rangeClasses}`}
     style={{ width: `${width}%`, lineHeight: '14px', minWidth: '8px' }}
     key={`range${width}-${Math.random()}`}
     data-testid={`rangeContent${value && value.replace(/ /g, '')}`}
@@ -36,17 +36,14 @@ const edgeRange = () => rangeContent(2, 'rounded-pill');
 const observationValuePoint = (actualValue, unit, small) => {
   return (
     <div
-      className={`bg-dark ${rangeBaseClasses} rounded-circle ${
-        small ? 'mx-0' : 'mx-1'
-      }`}
+      className={`${rangeBaseClasses}`}
+      // ${small ? 'mx-0' : 'mx-1'}
       style={{ width: small ? '9px' : '17px' }}
       key={`ValuePoint-${Math.random()}`}
     >
       {!small && (
         <span
-          className={`position-absolute top-0 translate-middle ps-2 ${
-            small ? 'pb-4 fs-1' : 'pb-5 fs-4'
-          } w-max-content`}
+          // className={`${small ? 'pb-4 fs-1' : 'pb-5 fs-4'} w-max-content`}
           data-testid="valuePoint"
         >
           {`${actualValue} ${unit}`}
@@ -137,20 +134,18 @@ const ObservationGraph = ({ referenceRange, valueQuantity, small }) => {
 
     return (
       <div
-        className={`position-relative ${
-          small ? 'w-110 graph-width-sm ms-2 ms-sm-0' : 'my-6'
-        }`}
+      // className={`${small ? 'w-110 graph-width-sm ms-2 ms-sm-0' : 'my-6'}`}
       >
         {small && (
           <span
-            className={`pb-1 fs-75 font-source d-inline-block`}
+            // className={`pb-1 fs-75 font-source d-inline-block`}
             data-testid="smallRangeText"
           >
             {smallRangeText}
           </span>
         )}
         <div
-          className="d-flex overflow-hidden bg-gray-200 fs-75 rounded-pill"
+          // className="d-flex overflow-hidden bg-gray-200 fs-75 rounded-pill"
           style={{ height: small ? '0.5rem' : '1rem' }}
         >
           {edgeRange()}

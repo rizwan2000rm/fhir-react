@@ -10,9 +10,9 @@ const Date = ({ fhirData, isBlack, testId, className = '' }) => {
   return (
     <span
       data-testid={testId || 'providedDate'}
-      className={`${[className, 'fhir-datatype__Date', 'font-source'].join(
-        ' ',
-      )}${isBlack ? '' : ' text-secondary'}`}
+      // className={`${[className, 'fhir-datatype__Date', 'font-source'].join(
+      //   ' ',
+      // )}${isBlack ? '' : ' text-secondary'}`}
     >
       {dateValue}
     </span>

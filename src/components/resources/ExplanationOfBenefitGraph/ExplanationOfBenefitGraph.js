@@ -32,11 +32,11 @@ const ExplanationOfBenefitGraph = props => {
   };
 
   const CenteredMetric = () => (
-    <div className="position-absolute d-flex flex-column w-100 translate-middle-y top-50">
-      <h6 className="text-secondary" data-testid="metricText">
+    <div className="">
+      <h6 className="" data-testid="metricText">
         {totalLabel || 'Total'}
       </h6>
-      <h5 className="fw-bold text-dark" data-testid="metricAmount">
+      <h5 className="" data-testid="metricAmount">
         {getTotalAmount()}
       </h5>
     </div>
@@ -47,7 +47,7 @@ const ExplanationOfBenefitGraph = props => {
       {/* according to nivo library documentation, to keep Pie Chart svg aligned, 'height' prop has to be constant */}
       <div
         style={{ height: height || 200 }}
-        className="position-relative text-center"
+        className=""
         data-testid="responsivePie"
       >
         <ResponsivePie

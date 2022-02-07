@@ -23,21 +23,16 @@ const ResourceCategory = props => {
     <Root name="ResourceCategory">
       <button
         type="button"
-        className="btn d-flex align-items-center justify-content-between w-100 py-4 px-4 bg-white"
+        // className="btn d-flex align-items-center justify-content-between w-100 py-4 px-4 bg-white"
       >
-        <div className="d-flex gap-2">
+        <div className="">
           <HeaderIcon headerIcon={headerIcon} />
           <Title data-testid="title">{title}</Title>
         </div>
-        <div className="d-flex gap-2 align-items-center">
+        <div className="">
           {parsedItemsCount > 0 && (
-            <div
-              className="d-flex rounded-pill py-1 px-2 bg-gray-200"
-              data-testid="itemsCount"
-            >
-              <small className="fw-bold text-nowrap ">
-                {getItemsCountLabel()}
-              </small>
+            <div className="" data-testid="itemsCount">
+              <small className="">{getItemsCountLabel()}</small>
             </div>
           )}
           <img

@@ -7,10 +7,10 @@ const Reference = props => {
   const reference = _get(fhirData, 'reference', '');
   return (
     <div
-      className="fhir-datatype__Reference d-inline-block"
+      className="fhir-datatype__Reference"
       data-testid={props['data-testid']}
     >
-      {display && <span className="mr-2 pe-1">{display}</span>}
+      {display && <span className="">{display}</span>}
       <span>{reference}</span>
     </div>
   );

@@ -287,10 +287,7 @@ const ExplanationOfBenefit = ({
 
   const getRowItem = (item, index) =>
     ('isLoaded' in item ? item.isLoaded : item.data) && (
-      <div
-        key={`details-item-${index}`}
-        className="col-12 col-sm-6 col-md-4 text-wrap"
-      >
+      <div key={`details-item-${index}`} className="">
         <Value label={item.label} data-testid={item.testId} dirColumn>
           {item.data}
         </Value>
@@ -423,12 +420,8 @@ const ExplanationOfBenefit = ({
         }
         bodyContent={
           <Body>
-            <ValueSection
-              label="Details"
-              data-testid="details"
-              className="mt-3"
-            >
-              <div className="row gy-sm-3">
+            <ValueSection label="Details" data-testid="details" className="">
+              <div className="">
                 {EOBRowData.map((x, index) => getRowItem(x, index))}
               </div>
             </ValueSection>
@@ -453,7 +446,7 @@ const ExplanationOfBenefit = ({
                       <TableHeader>Item cost</TableHeader>
                     </TableRow>
                   </thead>
-                  <tbody className="border-top-0">
+                  <tbody className="">
                     {services.map((serviceItem, i) => {
                       return (
                         <TableRow key={`serviceItem-${i}`}>
@@ -504,7 +497,7 @@ const ExplanationOfBenefit = ({
                       <TableHeader>Status</TableHeader>
                     </TableRow>
                   </thead>
-                  <tbody className="border-top-0">
+                  <tbody className="">
                     {information.map((informationItem, i) => {
                       const infoTitle = _get(
                         informationItem,

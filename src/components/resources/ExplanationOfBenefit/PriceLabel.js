@@ -5,10 +5,7 @@ const PriceLabel = ({ ...props }) => {
   const { totalCost } = props;
 
   return (
-    <h3
-      className="fw-bold fs-2 mb-0 w-90 title-width-sm"
-      data-testid="headerPrice"
-    >
+    <h3 className="" data-testid="headerPrice">
       {parseValueIntoMonetaryValueOfGivenCurrency(
         totalCost.value,
         totalCost.code,

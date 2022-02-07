@@ -149,7 +149,7 @@ function Condition(props) {
             rightAdditionalContent={
               severityText && (
                 <>
-                  <div className="ps-2" />
+                  <div className="" />
                   <Badge data-testid="severity">{severityText} severity</Badge>
                 </>
               )
