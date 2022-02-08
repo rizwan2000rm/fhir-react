@@ -1,3 +1,30 @@
+.fhir-ui__Header {
+  background: #fff;
+  padding: 1.5rem;
+  cursor: pointer;
+  border-radius: 12px;
+
+  h4 {
+    margin: 0;
+  }
+
+  &__title-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  &__additional-content {
+    margin-top: 16px;
+  }
+}
+
 .header-rotate {
   transform: rotate(-180deg);
 }

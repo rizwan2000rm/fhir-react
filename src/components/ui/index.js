@@ -3,6 +3,10 @@ import React from 'react';
 import { getBadgeColor } from '../../utils/getBadgeColor';
 import HeaderIcon from '../datatypes/HeaderIcon';
 
+import './_header.scss';
+import './_badge.scss';
+import './_ui.scss';
+
 export const Header = ({
   resourceName,
   isAccordionOpenable,
@@ -22,26 +26,24 @@ export const Header = ({
     <>
       {// This condition was left due to fact, that to much changes in Header will generate many errors in tests. This condition will be removed after all changes have been made.
       children || (
-        <div className={`fhir-ui__${resourceName}-Header`}>
+        <div className={`fhir-ui__Header`}>
           <div
-            className={`fhir-ui__${resourceName}-Header__title-data ${
+            className={`fhir-ui__Header__title-data ${
               isAccordionOpenable ? 'header__title-row' : ''
             }`}
           >
-            <div className="">
-              <div className={`fhir-ui__${resourceName}-Header__icon`}>
+            <div className="flex-container">
+              <div className={`fhir-ui__Header__icon`}>
                 <HeaderIcon headerIcon={icon} resourceName={resourceName} />
               </div>
-              <div className={`fhir-ui__${resourceName}-Header__title`}>
+              <div className={`fhir-ui__Header__title`}>
                 <Title data-testid={titleTestID || 'title'}>
                   {title || ''}
                 </Title>
               </div>
             </div>
 
-            <div
-              className={`fhir-ui__${resourceName}-Header__badges ${rightItemsClass}`}
-            >
+            <div className={`fhir-ui__Header__badges ${rightItemsClass}`}>
               {prefixBadge && <div className="">{prefixBadge}</div>}
               <div className="">
                 {badges}
@@ -50,13 +52,13 @@ export const Header = ({
             </div>
           </div>
           <div
-            className={`fhir-ui__${resourceName}-Header__additional-content ${
+            className={`fhir-ui__Header__additional-content ${
               additionalContent ? '' : ''
             }`}
           >
             {additionalContent}
             <div
-              className={`fhir-ui__${resourceName}-Header__rightAdditionalContent ${rightItemsClass}`}
+              className={`fhir-ui__Header__rightAdditionalContent ${rightItemsClass}`}
             >
               {rightAdditionalContent}
             </div>
@@ -111,7 +113,7 @@ export const Body = ({ tableData = [], reverseContent, children }) => (
       {tableData.map(
         (value, index) =>
           value.status && (
-            <div className="" key={`table-data-item-${index}`}>
+            <div className="table-row" key={`table-data-item-${index}`}>
               <div className="dataTable__value-label">
                 <Label>{value.label}</Label>
               </div>

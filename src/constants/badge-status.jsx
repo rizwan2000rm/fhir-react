@@ -1,6 +1,6 @@
 export default {
   // condition
-  active: 'bg-teal-100 text-teal-600',
+  active: 'bg-active text-active',
   recurrence: '',
   relapse: 'bg-indigo-100 text-indigo-600',
   inactive:
@@ -10,7 +10,7 @@ export default {
   // immunization
   'in-progress': 'bg-orange-100 text-orange-600',
   'on-hold': 'bg-gray-100 text-pink-500',
-  completed: 'bg-teal-100 text-teal-600',
+  completed: 'bg-completed text-completed',
   'entered-in-error': 'bg-red-100 text-red-600',
   stopped: 'bg-gray-100 text-gray-600',
   'not-done': 'bg-yellow-100 text-yellow-600',
