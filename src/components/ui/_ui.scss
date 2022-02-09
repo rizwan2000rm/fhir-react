@@ -18,3 +18,61 @@
     list-style: none;
   }
 }
+
+//header
+.fhir-ui__Header {
+  padding: 1rem;
+  cursor: pointer;
+
+  h4 {
+    margin: 0;
+  }
+
+  &__title-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__additional-content {
+    margin-top: 16px;
+  }
+}
+
+//badge
+.header-rotate {
+  transform: rotate(-180deg);
+}
+
+.bg-completed {
+  background-color: rgba(210, 244, 234) !important;
+}
+
+.text-completed {
+  color: rgba(26, 161, 121) !important;
+}
+
+.fhir-ui__Badge {
+  padding: 4px 8px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 12px;
+  margin-left: 16px;
+}
+
+//other
+.fhir-ui__BadgeSecondary {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.fhir-ui__Title {
+  text-transform: capitalize;
+  font-size: 14px;
+}

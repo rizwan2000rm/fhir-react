@@ -1,6 +1,6 @@
 {
   "name": "custom-fhir-react",
-  "version": "0.4.2",
+  "version": "0.4.5",
   "description": "React component library for displaying FHIR Resources ",
   "main": "build/index.js",
   "peerDependencies": {

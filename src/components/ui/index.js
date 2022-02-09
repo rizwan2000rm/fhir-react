@@ -3,8 +3,6 @@ import React from 'react';
 import { getBadgeColor } from '../../utils/getBadgeColor';
 import HeaderIcon from '../datatypes/HeaderIcon';
 
-import './_header.scss';
-import './_badge.scss';
 import './_ui.scss';
 
 export const Header = ({
@@ -51,7 +49,7 @@ export const Header = ({
               </div>
             </div>
           </div>
-          <div
+          {/* <div
             className={`fhir-ui__Header__additional-content ${
               additionalContent ? '' : ''
             }`}
@@ -62,7 +60,7 @@ export const Header = ({
             >
               {rightAdditionalContent}
             </div>
-          </div>
+          </div> */}
         </div>
       )}
     </>
