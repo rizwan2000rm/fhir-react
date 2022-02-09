@@ -1,6 +1,6 @@
 {
   "name": "custom-fhir-react",
-  "version": "0.4.5",
+  "version": "0.4.8",
   "description": "React component library for displaying FHIR Resources ",
   "main": "build/index.js",
   "peerDependencies": {
@@ -10,6 +10,7 @@
     "@nivo/core": "^0.74.0",
     "@nivo/pie": "^0.74.0",
     "@popperjs/core": "^2.10.2",
+    "custom-fhir-react": "^0.4.7",
     "dompurify": "^2.0.7",
     "lodash": "^4.17.15",
     "marked": "^0.8.0",
