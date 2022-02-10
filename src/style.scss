@@ -67,52 +67,47 @@
 
 // $enable-negative-margins: true;
 
-// .header-icon__placeholder {
-//   background-color: #a3a3a3;
-// }
+.header-icon__placeholder {
+  background-color: #a3a3a3;
+}
 
-// .header-icon__image,
-// .header-icon__placeholder {
-//   width: 24px;
-//   height: 24px;
-// }
+.header-icon__image,
+.header-icon__placeholder {
+  width: 24px;
+  height: 24px;
+}
 
-// .header-icon__practitioner-avatar {
-//   width: 24px;
-//   height: 24px;
-// }
+.header-icon__practitioner-avatar {
+  width: 24px;
+  height: 24px;
+}
 
-// .dataTable__value-label {
-//   width: auto;
-//   @include media-breakpoint-up(sm) {
-//     width: 130px;
-//   }
-// }
+.dataTable__value-label {
+  width: auto;
+  // @include media-breakpoint-up(sm) {
+  //   width: 130px;
+  // }
+}
 
-// .fhir-ui__Body__data-cell {
-//   padding-left: 24px !important;
-// }
+.fhir-ui__Body__data-cell {
+  padding-left: 24px !important;
+}
 
-// .fhir-ui__ValueUnitQty {
-//   font-size: 28px;
-// }
+.fhir-ui__ValueUnitQty {
+  font-size: 28px;
+}
 
-// .fhir-ui__ValueUnit {
-//   font-size: 18px;
-// }
+.fhir-ui__ValueUnit {
+  font-size: 18px;
+}
 
-// .fhir-ui__Badge {
-//   width: fit-content;
-// }
+.fhir-ui__Badge {
+  width: fit-content;
+}
 
-// .header__title-row {
-//   padding-right: 32px;
-// }
-
-// .chevron:hover {
-//   background-color: $gray-200;
-//   border-radius: 4px;
-// }
+.header__title-row {
+  padding-right: 32px;
+}
 
 // @include media-breakpoint-up(sm) {
 //   .w-90.title-width-sm {

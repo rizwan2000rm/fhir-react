@@ -147,7 +147,7 @@ export const Root = props => (
 
 export const Table = props => (
   <div className="">
-    <table className={`${props.className || ''}`}>{props.children}</table>
+    <table className={`table ${props.className || ''}`}>{props.children}</table>
   </div>
 );
 

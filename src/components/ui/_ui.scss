@@ -1,9 +1,29 @@
+.fhir-ui__Body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fhir-ui__ValueSection-label {
+  color: rgb(104, 113, 122);
+}
+
+.fhir-ui__ValueSection-body {
+  padding-top: 10px;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 .fhir-ui__Label {
   color: rgb(104, 113, 122);
   min-width: 130px;
 }
 
-.fhir-ui__Value .fhir-ui__Value {
+.fhir-ui__Value {
   display: flex;
   gap: 10px;
 }
@@ -12,10 +32,74 @@
   display: flex;
   flex-direction: column;
   line-height: 1.5rem;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 
   ul {
     list-style: none;
+  }
+}
+
+// Table
+.table {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+
+  overflow-x: auto;
+
+  // optional - looks better for small cell values
+  white-space: nowrap;
+
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  tbody {
+    // optional - enable iOS momentum scrolling
+    -webkit-overflow-scrolling: touch;
+
+    // scrolling shadows
+    background-size: 10px 100%, 10px 100%;
+    background-attachment: scroll, scroll;
+    background-repeat: no-repeat;
+  }
+
+  // change these gradients from white to your background colour if it differs
+  // gradient on the first cells to hide the left shadow
+  td:first-child,
+  tbody tr:first-child {
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 20px 100%;
+  }
+
+  // gradient on the last cells to hide the right shadow
+  td:last-child,
+  tbody tr:last-child {
+    background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 20px 100%;
+  }
+
+  th {
+    font-size: 11px;
+    text-align: left;
+    text-transform: uppercase;
+    background: #f2f0e6;
+  }
+
+  th,
+  td {
+    padding: 6px 12px;
+    border: 1px solid #d9d7ce;
   }
 }
 
@@ -58,18 +142,83 @@
   color: rgba(26, 161, 121) !important;
 }
 
+.bg-relapse {
+  background-color: #e0cffc !important;
+}
+
+.text-relapse {
+  color: #520dc2 !important;
+}
+
+.bg-remission {
+  background-color: #cff4fc !important;
+}
+
+.text-remission {
+  color: #0aa2c0 !important;
+}
+
+.bg-finished {
+  background-color: #e2e5e7 !important;
+}
+
+.text-finished {
+  color: #031633 !important;
+}
+
+.bg-resolved {
+  background-color: #cfe2ff !important;
+}
+
+.text-resolved {
+  color: #0a58ca !important;
+}
+
 .fhir-ui__Badge {
   padding: 4px 8px;
   font-weight: 600;
   text-transform: capitalize;
   border-radius: 12px;
-  margin-left: 16px;
+}
+
+.bg-in-progress {
+  background-color: #ffe5d0 !important;
+}
+
+.text-in-progress {
+  color: #ca6510 !important;
+}
+
+.bg-on-hold {
+  background-color: #f8f9fa !important;
+}
+
+.text-on-hold {
+  color: #d63384 !important;
+}
+
+.bg-entered-in-error {
+  background-color: #f8d7da !important;
+}
+
+.text-entered-in-error {
+  color: #b02a37 !important;
+}
+
+.bg-not-done {
+  background-color: #fff3cd !important;
+}
+
+.text-not-done {
+  color: #cc9a06 !important;
 }
 
 //other
 .fhir-ui__BadgeSecondary {
-  font-size: 16px;
+  padding: 4px 8px;
   font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 12px;
 }
 
 .fhir-ui__Title {
