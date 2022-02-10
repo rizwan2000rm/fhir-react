@@ -223,11 +223,8 @@
 }
 
 //other
-.fhir-ui__BadgeSecondary {
-  padding: 4px 8px;
-  font-weight: 600;
+.fhir-resource__Bundle__item--title {
   text-transform: capitalize;
-  border-radius: 12px;
 }
 
 .fhir-ui__Title {
