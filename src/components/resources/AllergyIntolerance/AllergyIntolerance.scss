@@ -1,0 +1,9 @@
+.fhir-resource__AllergyIntolerance {
+  display: flex;
+  align-items: center;
+
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}

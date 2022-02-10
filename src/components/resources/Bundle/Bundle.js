@@ -7,7 +7,7 @@ import UnhandledResourceDataStructure from '../UnhandledResourceDataStructure';
 import { Root, Header, Title, Badge, Body, BadgeSecondary } from '../../ui';
 import * as FhirResourceTypes from '../../supportedFhirResourceList';
 
-import './Bundle.css';
+import './Bundle.scss';
 
 export default function Bundle({ fhirResource, fhirVersion, fhirIcons }) {
   const commonDTO = fhirResource => {

@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .fhir-ui__Body {
   display: flex;
   flex-direction: column;
@@ -114,8 +119,8 @@
 
   &__title-data {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
   }
 
   .flex-container {
@@ -125,6 +130,10 @@
   }
 
   &__additional-content {
+    margin-top: 16px;
+  }
+
+  &__badges {
     margin-top: 16px;
   }
 }

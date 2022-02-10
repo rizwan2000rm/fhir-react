@@ -40,7 +40,6 @@ export const Header = ({
                 </Title>
               </div>
             </div>
-
             <div className={`fhir-ui__Header__badges ${rightItemsClass}`}>
               {prefixBadge && <div className="">{prefixBadge}</div>}
               <div className="">
